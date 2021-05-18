@@ -14,6 +14,7 @@ std::map<T, int> factorize(T n) {
             res[i]++;
         }
     }
+    if (n != 1) res[n]++;
     return res;
 }
 }  // namespace Math
