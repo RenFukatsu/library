@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: math/prime_factor.h
-    title: "\u7D20\u56E0\u6570\u5206\u89E3"
+    title: prime factor
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

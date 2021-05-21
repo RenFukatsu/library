@@ -36,8 +36,18 @@ data:
   - test/aoj/NTL_1_A.test.cpp
 documentation_of: math/prime_factor.h
 layout: document
-redirect_from:
-- /library/math/prime_factor.h
-- /library/math/prime_factor.h.html
-title: "\u7D20\u56E0\u6570\u5206\u89E3"
+title: prime factor
 ---
+
+```
+map<T, int> factorize(T N)
+```
+
+整数$N$に対し，$O(\sqrt{N})$で素因数分解を行う関数
+
+### 制約
+- $T$は`int / unsigned int / int64_t / unsigned int64_t`
+- $2 \leq N \leq 10^18$
+
+### 計算量
+- $O(\sqrt{N})$
