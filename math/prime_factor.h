@@ -1,6 +1,3 @@
-/// @brief 素因数分解
-/// @date 2021.5.21
-
 #ifndef LIBRARY_MATH_PRIME_FACTOR_H_
 #define LIBRARY_MATH_PRIME_FACTOR_H_
 
