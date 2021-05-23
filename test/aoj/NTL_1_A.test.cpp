@@ -6,12 +6,10 @@
 int main() {
     int n;
     std::cin >> n;
-    auto mp = Math::factorize(n);
+    auto v = Math::factorize(n);
     std::cout << n << ':';
-    for (auto [x, cnt] : mp) {
-        for (int i = 0; i < cnt; i++) {
-            std::cout << ' ' << x;
-        }
+    for (auto x : v) {
+        std::cout << ' ' << x;
     }
     std::cout << '\n';
     return 0;
