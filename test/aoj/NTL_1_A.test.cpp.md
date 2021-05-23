@@ -15,28 +15,26 @@ data:
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/6/NTL/1/NTL_1_A
   bundledCode: "#line 1 \"test/aoj/NTL_1_A.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/6/NTL/1/NTL_1_A\"\
-    \n\n#include <iostream>\n#line 1 \"math/prime_factor.h\"\n\n\n\n#include <map>\n\
-    #include <vector>\n\nnamespace Math {\ntemplate <typename T>\nstd::map<T, int>\
-    \ factorize(T n) {\n    std::map<T, int> res;\n    for (T i = 2; i * i <= n; i++)\
-    \ {\n        while (n % i == 0) {\n            n /= i;\n            res[i]++;\n\
-    \        }\n    }\n    if (n != 1) res[n]++;\n    return res;\n}\n}  // namespace\
+    \n\n#include <iostream>\n#line 1 \"math/prime_factor.h\"\n\n\n\n#include <vector>\n\
+    \nnamespace Math {\ntemplate <typename T>\nstd::vector<T> factorize(T n) {\n \
+    \   std::vector<T> res;\n    for (T i = 2; i * i <= n; i++) {\n        while (n\
+    \ % i == 0) {\n            n /= i;\n            res.push_back(i);\n        }\n\
+    \    }\n    if (n != 1) res.push_back(n);\n    return res;\n}\n}  // namespace\
     \ Math\n\n\n#line 5 \"test/aoj/NTL_1_A.test.cpp\"\n\nint main() {\n    int n;\n\
-    \    std::cin >> n;\n    auto mp = Math::factorize(n);\n    std::cout << n <<\
-    \ ':';\n    for (auto [x, cnt] : mp) {\n        for (int i = 0; i < cnt; i++)\
-    \ {\n            std::cout << ' ' << x;\n        }\n    }\n    std::cout << '\\\
-    n';\n    return 0;\n}\n"
+    \    std::cin >> n;\n    auto v = Math::factorize(n);\n    std::cout << n << ':';\n\
+    \    for (auto x : v) {\n        std::cout << ' ' << x;\n    }\n    std::cout\
+    \ << '\\n';\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/6/NTL/1/NTL_1_A\"\
     \n\n#include <iostream>\n#include \"../../math/prime_factor.h\"\n\nint main()\
-    \ {\n    int n;\n    std::cin >> n;\n    auto mp = Math::factorize(n);\n    std::cout\
-    \ << n << ':';\n    for (auto [x, cnt] : mp) {\n        for (int i = 0; i < cnt;\
-    \ i++) {\n            std::cout << ' ' << x;\n        }\n    }\n    std::cout\
-    \ << '\\n';\n    return 0;\n}\n"
+    \ {\n    int n;\n    std::cin >> n;\n    auto v = Math::factorize(n);\n    std::cout\
+    \ << n << ':';\n    for (auto x : v) {\n        std::cout << ' ' << x;\n    }\n\
+    \    std::cout << '\\n';\n    return 0;\n}\n"
   dependsOn:
   - math/prime_factor.h
   isVerificationFile: true
   path: test/aoj/NTL_1_A.test.cpp
   requiredBy: []
-  timestamp: '2021-05-22 01:30:05+09:00'
+  timestamp: '2021-05-23 23:55:08+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/NTL_1_A.test.cpp
